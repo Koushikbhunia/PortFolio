@@ -1,0 +1,8 @@
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;   /* Makes it circular */
+  object-fit: cover;    /* Ensures the picture fits nicely */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
