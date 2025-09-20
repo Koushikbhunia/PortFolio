@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Koushik Bhunia</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylee.css">
   <style>
     body {
       margin: 0;
@@ -151,20 +151,24 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="container">
+  <div class="container header-flex">
+    <div class="header-left">
+      <img src="images/1234.jpg" alt="Koushik Bhunia" class="profile-pic small">
       <h1>Koushik Bhunia</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </div>
-  </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero">
-    <img src="Images/1234.jpg" alt="Koushik Bhunia" class="profile-pic">
+    <img src="Images/1234.jpg" alt="Koushik Bhunia" class="profile-pic large">
     <h2>Hi, I’m <span>Koushik</span></h2>
     <p>A passionate <strong>Software Engineer</strong> building modern web & AI solutions.</p>
     <a href="#contact" class="btn-primary">Let’s Connect</a>
@@ -223,5 +227,17 @@
   <footer>
     © <script>document.write(new Date().getFullYear())</script> Koushik Bhunia. All rights reserved.
   </footer>
+  
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 150) {  // adjust scroll distance
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
 </body>
 </html>

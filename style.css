@@ -1,8 +1,36 @@
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;   /* Makes it circular */
-  object-fit: cover;    /* Ensures the picture fits nicely */
+/* Header layout fix */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Make left side (image + name) align properly */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.profile-pic.large {
+  width: 160px;
+  height: 160px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Small profile image (in header) */
+.profile-pic.small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease;
+}
+
+/* When scrolled, show header pic */
+header.scrolled .profile-pic.small {
+  opacity: 1;
+  transform: scale(1);
 }
